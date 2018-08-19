@@ -55,7 +55,7 @@ const routes = {
 
 };
 function loadDatabase() {
-  var readYaml = require('read-yaml');
+  let readYaml = require('read-yaml');
   return readYaml('./database.yml', function(err, data) {
     if (err){
       console.log(err);
@@ -67,7 +67,7 @@ function loadDatabase() {
 
 //Save to database
 function saveDatabase() {
-  var yaml = require('write-yaml');
+  let yaml = require('write-yaml');
   yaml('database.yml', database, function(err) {
     if(err){
       console.log(err);
